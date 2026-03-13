@@ -1,9 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const carouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   // High-quality makeup images from Unsplash
   const carouselImages = [
@@ -49,6 +52,21 @@ function Header() {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  // Navigate to appointment page
+  const goToAppointment = (e) => {
+    e.preventDefault();
+    navigate('/appointment');
+    closeMenu();
+  };
+
   // Smooth scroll to section
   const scrollToSection = (e, sectionId) => {
     e.preventDefault();
@@ -56,19 +74,25 @@ function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    closeMenu();
   };
 
   return (
     <header className="header">
-      <nav className="navbar">
-        <div className="logo">Anjali Bhaskar</div>
-        <ul className="nav-menu">
-          <li><a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a></li>
+      <nav className={`navbar ${menuOpen ? 'mobile-open' : ''}`}>
+        <div className="logo" onClick={() => navigate('/')}>Anjali Bhaskar</div>
+        <div className="hamburger" onClick={toggleMenu}>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
+        </div>
+        <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+          <li><a href="#home" onClick={(e) => { e.preventDefault(); navigate('/'); closeMenu(); }}>Home</a></li>
           <li><a href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a></li>
           <li><a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a></li>
           <li><a href="#portfolio" onClick={(e) => scrollToSection(e, 'portfolio')}>Portfolio</a></li>
           <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a></li>
-          <li><a href="#appointment" onClick={(e) => scrollToSection(e, 'appointment')} className="book-btn">Book Now</a></li>
+          <li><a href="/appointment" onClick={goToAppointment} className="book-btn">Book Now</a></li>
         </ul>
       </nav>
       

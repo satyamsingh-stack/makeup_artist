@@ -17,16 +17,17 @@ function Portfolio() {
     '/Images/9.jpeg',
   ];
 
+  // Use images as video thumbnails
   const videos = [
-    '/Videos/Video-250.mp4',
-    '/Videos/Video-457.mp4',
-    '/Videos/Video-625.mp4',
-    '/Videos/Video-864.mp4',
-    '/Videos/Video-947.mp4',
-    '/Videos/Video-165.mp4',
-    '/Videos/Video-650.mp4',
-    '/Videos/Video-741.mp4',
-    '/Videos/Video-83.mp4',
+    { video: '/Videos/Video-250.mp4' },
+    { video: '/Videos/Video-457.mp4' },
+    { video: '/Videos/Video-625.mp4' },
+    { video: '/Videos/Video-864.mp4' },
+    { video: '/Videos/Video-947.mp4' },
+    { video: '/Videos/Video-165.mp4' },
+    { video: '/Videos/Video-650.mp4' },
+    { video: '/Videos/Video-741.mp4' },
+    { video: '/Videos/Video-83.mp4' },
   ];
 
   const handleVideoClick = (video, index) => {
@@ -57,7 +58,7 @@ function Portfolio() {
           className={`tab-btn ${activeTab === 'videos' ? 'active' : ''}`}
           onClick={() => setActiveTab('videos')}
         >
-          <span className="tab-icon">🎥</span> Videos
+          <span className="tab-icon">🎥</span> Watch Our Transformations
         </button>
       </div>
 
@@ -77,21 +78,22 @@ function Portfolio() {
       {activeTab === 'videos' && (
         <>
           <div className="portfolio-grid video-grid">
-            {videos.map((video, index) => (
+            {videos.map((item, index) => (
               <div 
                 key={index} 
                 className={`portfolio-item video-item ${playingVideo === index ? 'playing' : ''}`}
-                onClick={() => !playingVideo && handleVideoClick(video, index)}
+                onClick={() => !playingVideo && handleVideoClick(item.video, index)}
               >
                 {playingVideo !== index ? (
                   <>
-                    <video preload="metadata" style={{ width: '100%', height: '100%' }}>
-                      <source src={video} type="video/mp4" />
+                    <video preload="metadata">
+                      <source src={item.video} type="video/mp4" />
                     </video>
+                    <div className="video-overlay"></div>
                     <div className="video-play-btn">
                       <span className="play-icon">▶</span>
                     </div>
-                    <div className="video-label">Video {index + 1}</div>
+                    <div className="video-label">Watch Transformation</div>
                   </>
                 ) : null}
               </div>
@@ -110,7 +112,7 @@ function Portfolio() {
                   className="reels-video"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <source src={videos[playingVideo]} type="video/mp4" />
+                  <source src={videos[playingVideo].video} type="video/mp4" />
                 </video>
               </div>
             </div>
