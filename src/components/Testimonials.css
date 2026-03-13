@@ -1,0 +1,16 @@
+.testimonials {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.testimonials p {
+  font-size: 1rem;
+  color: #555;
+}

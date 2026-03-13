@@ -1,0 +1,33 @@
+.appointment {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appointment-form label {
+  font-weight: bold;
+}
+
+.appointment-form input, .appointment-form textarea, .appointment-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-form button {
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.appointment-form button:hover {
+  background-color: #e06b50;
+}
