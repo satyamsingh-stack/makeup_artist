@@ -39,7 +39,7 @@ function Portfolio() {
   };
 
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="portfolio">
       <div className="portfolio-header">
         <h2 className="portfolio-title">✨ Our Work Showcase ✨</h2>
         <p className="portfolio-subtitle">Explore our latest makeup transformations and exclusive behind-the-scenes content</p>

@@ -1,54 +1,110 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Header.css';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Header() {
   const carouselRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // High-quality makeup images from Unsplash
+  const carouselImages = [
+    {
+      url: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1920&h=800&fit=crop&q=80',
+      title: 'Bridal Elegance',
+      subtitle: 'Make your wedding day unforgettable'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=1920&h=800&fit=crop&q=80',
+      title: 'Glamour Redefined',
+      subtitle: 'Celebrity-style makeovers'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=1920&h=800&fit=crop&q=80',
+      title: 'Destination Weddings',
+      subtitle: 'We travel across Thailand, Vietnam & India'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1920&h=800&fit=crop&q=80',
+      title: 'Special Events',
+      subtitle: 'Professional makeup for every occasion'
+    }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [carouselImages.length]);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  // Smooth scroll to section
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="header">
       <nav className="navbar">
         <div className="logo">Anjali Bhaskar</div>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/appointment">Appointment</a></li>
+        <ul className="nav-menu">
+          <li><a href="#home" onClick={(e) => scrollToSection(e, 'home')}>Home</a></li>
+          <li><a href="#about" onClick={(e) => scrollToSection(e, 'about')}>About</a></li>
+          <li><a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a></li>
+          <li><a href="#portfolio" onClick={(e) => scrollToSection(e, 'portfolio')}>Portfolio</a></li>
+          <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a></li>
+          <li><a href="#appointment" onClick={(e) => scrollToSection(e, 'appointment')} className="book-btn">Book Now</a></li>
         </ul>
       </nav>
-      <div className="carousel-container">
-        <Carousel 
-          ref={carouselRef}
-          autoPlay 
-          infiniteLoop 
-          showThumbs={false} 
-          showStatus={false} 
-          showArrows={false}
-          interval={5000} 
-          transitionTime={1000}
-        >
-          <div className="slide-wrapper">
-            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1400&h=550&fit=crop&crop=faces" alt="Slide 1" />
-          </div>
-          <div className="slide-wrapper">
-            <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1400&h=550&fit=crop&crop=faces" alt="Slide 2" />
-          </div>
-          <div className="slide-wrapper">
-            <img src="https://images.unsplash.com/photo-1519415220914-67c4a47750bc?w=1400&h=550&fit=crop&crop=faces" alt="Slide 3" />
-          </div>
-          <div className="slide-wrapper">
-            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&h=550&fit=crop&crop=faces" alt="Slide 4" />
-          </div>
-        </Carousel>
+      
+      <div className="carousel-container" id="home">
+        <div className="carousel-slides">
+          {carouselImages.map((slide, index) => (
+            <div 
+              key={index} 
+              className={`slide-wrapper ${index === currentSlide ? 'active' : ''}`}
+            >
+              <img src={slide.url} alt={slide.title} />
+              <div className="slide-overlay"></div>
+              <div className="slide-content">
+                <h2 className="slide-title">{slide.title}</h2>
+                <p className="slide-subtitle">{slide.subtitle}</p>
+              </div>
+            </div>
+          ))}
+        </div>
         
-        <button className="carousel-nav-btn carousel-prev" onClick={() => carouselRef.current?.onClickPrev?.()}>
+        <button className="carousel-nav-btn carousel-prev" onClick={goToPrev}>
           &#10094;
         </button>
-        <button className="carousel-nav-btn carousel-next" onClick={() => carouselRef.current?.onClickNext?.()}>
+        <button className="carousel-nav-btn carousel-next" onClick={goToNext}>
           &#10095;
         </button>
+        
+        <div className="carousel-dots">
+          {carouselImages.map((_, index) => (
+            <button 
+              key={index} 
+              className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+            ></button>
+          ))}
+        </div>
       </div>
     </header>
   );

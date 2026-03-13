@@ -2,7 +2,7 @@ import React from 'react';
 
 function Bio() {
   return (
-    <section className="bio fade-in-element">
+    <section className="bio fade-in-element" id="about">
       <h2>About Anjali Bhaskar</h2>
       <p>
         Anjali Bhaskar is a renowned international makeup artist who specializes in destination weddings and high-profile events. 

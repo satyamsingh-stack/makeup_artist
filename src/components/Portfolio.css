@@ -497,6 +497,24 @@
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .portfolio {
+    padding: 60px 20px;
+  }
+  
+  .portfolio-title {
+    font-size: 2.8rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .image-item {
+    height: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio {
     padding: 40px 15px;
@@ -538,6 +556,29 @@
   .video-modal-content {
     width: 95%;
     border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-title {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .tab-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .image-item {
+    height: 280px;
+  }
+  
+  .video-item {
+    height: 250px;
   }
 }
 

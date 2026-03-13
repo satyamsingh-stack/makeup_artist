@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Achievements from './components/Achievements';
 import Home from './pages/Home';
@@ -48,6 +49,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointment" element={<Appointment />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

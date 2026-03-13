@@ -40,7 +40,7 @@ function Services() {
   ];
 
   return (
-    <div className="services">
+    <div className="services" id="services">
       <div className="services-header">
         <h1>Our Services</h1>
         <p>Explore the wide range of makeup services we offer for every occasion</p>

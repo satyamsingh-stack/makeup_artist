@@ -1,33 +1,288 @@
 .appointment {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #1a3a52 100%);
+  min-height: 100vh;
 }
 
-.appointment-form {
+.appointment-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.appointment-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.appointment-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #b0b8c1;
+}
+
+.header-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff7e5f, #feb47b, transparent);
+  margin: 25px auto 0;
+}
+
+.appointment-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+
+/* Info Cards */
+.appointment-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
 }
 
-.appointment-form label {
-  font-weight: bold;
+.info-card {
+  background: linear-gradient(135deg, #1a2a3e 0%, #2a3d52 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 126, 95, 0.2);
+  transition: all 0.3s ease;
 }
 
-.appointment-form input, .appointment-form textarea, .appointment-form button {
-  padding: 10px;
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 126, 95, 0.5);
+  box-shadow: 0 15px 40px rgba(255, 126, 95, 0.2);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #b0b8c1;
+  margin: 5px 0;
+}
+
+/* Form Styles */
+.appointment-form {
+  background: linear-gradient(135deg, #1a2a3e 0%, #2a3d52 100%);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 126, 95, 0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 126, 95, 0.3);
+  border-radius: 10px;
+  background: rgba(10, 14, 39, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-.appointment-form button {
-  background-color: #ff7e5f;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff7e5f;
+  box-shadow: 0 0 20px rgba(255, 126, 95, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ff7e5f' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.form-group select option {
+  background: #1a2a3e;
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
   color: white;
   border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(255, 126, 95, 0.3);
 }
 
-.appointment-form button:hover {
-  background-color: #e06b50;
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(255, 126, 95, 0.5);
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #1a2a3e 0%, #2a3d52 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 126, 95, 0.3);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 auto 25px;
+  animation: successPop 0.5s ease;
+}
+
+@keyframes successPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.success-message h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.success-message p {
+  font-family: 'Poppins', sans-serif;
+  color: #b0b8c1;
+  margin: 10px 0;
+}
+
+.book-another-btn {
+  margin-top: 30px;
+  padding: 15px 35px;
+  background: transparent;
+  border: 2px solid #ff7e5f;
+  color: #ff7e5f;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-another-btn:hover {
+  background: #ff7e5f;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .appointment-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointment-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .info-card {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .appointment-form {
+    padding: 25px;
+  }
+  
+  .info-card {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment {
+    padding: 50px 15px;
+  }
+  
+  .appointment-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 15px;
+  }
 }

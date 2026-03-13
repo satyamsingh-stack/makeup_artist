@@ -7,7 +7,7 @@
 .hero-section {
   padding: 120px 20px;
   text-align: center;
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,6 +293,20 @@
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .tutorial-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
@@ -304,7 +318,7 @@
 
   .hero-section {
     padding: 80px 20px;
-    min-height: 50vh;
+    min-height: 40vh;
   }
 
   .tutorial-section h2 {
@@ -317,5 +331,24 @@
 
   .tutorial-modal video {
     width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  
+  .book-now {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  .tutorial-section h2 {
+    font-size: 1.5rem;
   }
 }
