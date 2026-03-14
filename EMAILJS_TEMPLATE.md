@@ -109,7 +109,7 @@ New Booking Request from {{from_name}}
             </div>
         </div>
         <div class="footer">
-            <p>Anjali Bhaskar Makeovers - Thailand's Premier Makeup Artist</p>
+            <p>Anjali Bhasker Makeovers - Thailand's Premier Makeup Artist</p>
             <p>This email was sent from your website booking form</p>
         </div>
     </div>

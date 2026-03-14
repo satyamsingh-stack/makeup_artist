@@ -8,7 +8,7 @@ function Contact() {
       <div className="contact-info">
         <div className="contact-card">
           <span className="contact-icon">✉️</span>
-          <a href="mailto:contact@anjalibhaskarmakeovers.com">contact@anjalibhaskarmakeovers.com</a>
+          <a href="mailto:contact@anjalibhaskermakeovers.com">contact@anjalibhaskermakeovers.com</a>
         </div>
         <div className="contact-card">
           <span className="contact-icon">📱</span>

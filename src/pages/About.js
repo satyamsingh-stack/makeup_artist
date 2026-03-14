@@ -21,8 +21,8 @@ function About() {
     <div className="about">
       <div className="about-container">
         <div className="about-content">
-          <h1>About Anjali Bhaskar</h1>
-          <p>Anjali Bhaskar is a celebrated makeup artist with years of experience in creating stunning looks for brides, celebrities, and high-profile clients. Based in Thailand, she travels across the globe to bring her expertise to destination weddings, fashion shows, and special events. With a team of over 30 skilled professionals, Anjali ensures that every client looks and feels their best on their special day.</p>
+          <h1>About Anjali Bhasker</h1>
+          <p>Anjali Bhasker is a celebrated makeup artist with years of experience in creating stunning looks for brides, celebrities, and high-profile clients. Based in Thailand, she travels across the globe to bring her expertise to destination weddings, fashion shows, and special events. With a team of over 30 skilled professionals, Anjali ensures that every client looks and feels their best on their special day.</p>
           <div className="about-stats">
             <div className="stat-item">
               <h3>30+</h3>
@@ -39,7 +39,7 @@ function About() {
           </div>
         </div>
         <div className="about-image">
-          <img src="/Images/7.jpeg" alt="Anjali Bhaskar" />
+          <img src="/Images/7.jpeg" alt="Anjali Bhasker" />
         </div>
       </div>
 

@@ -80,7 +80,7 @@ function Header({ onBookNowClick }) {
   return (
     <header className="header">
       <nav className={`navbar ${menuOpen ? 'mobile-open' : ''}`}>
-        <div className="logo" onClick={() => navigate('/')}>Anjali Bhaskar</div>
+        <div className="logo" onClick={() => navigate('/')}>Anjali Bhasker</div>
         <div className="hamburger" onClick={toggleMenu}>
           <span className={`bar ${menuOpen ? 'open' : ''}`}></span>
           <span className={`bar ${menuOpen ? 'open' : ''}`}></span>

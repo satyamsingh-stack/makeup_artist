@@ -11,7 +11,7 @@ function Team() {
       </p>
       <p>
         Each team member is trained to deliver the same level of excellence and artistry that defines 
-        Anjali Bhaskar Makeovers, ensuring every client receives the full professional treatment 
+        Anjali Bhasker Makeovers, ensuring every client receives the full professional treatment 
         no matter where the event takes place.
       </p>
     </section>

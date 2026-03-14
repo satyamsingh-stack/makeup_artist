@@ -6,7 +6,7 @@ function Footer() {
     <footer className="footer" id="contact">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>Anjali Bhaskar Makeovers</h3>
+          <h3>Anjali Bhasker Makeovers</h3>
           <p>International Makeup Artist specializing in destination weddings, celebrity makeovers, and special events.</p>
           <div className="footer-social">
             <a href="https://www.instagram.com/anjalibhaskermakeovers?igsh=bDIwYnR1dGZ2b3ox" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -24,7 +24,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <div className="contact-info">
-            <p>📧 contact@anjalibhaskarmakeovers.com</p>
+            <p>📧 contact@anjalibhaskermakeovers.com</p>
             <p>📱 +66 123 456 789</p>
             <p>📍 Bangkok, Thailand</p>
           </div>
@@ -54,7 +54,7 @@ function Footer() {
       </div>
       
       <div className="footer-bottom">
-        <p>© 2024 Anjali Bhaskar Makeovers. All rights reserved.</p>
+        <p>© 2024 Anjali Bhasker Makeovers. All rights reserved.</p>
       </div>
     </footer>
   );

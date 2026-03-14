@@ -33,8 +33,8 @@ function Home({ openBookingModal }) {
       {/* Hero Section */}
       <section className="hero-section" id="home">
         <div className="hero-content">
-          <h1>Welcome to Anjali Bhaskar Makeovers</h1>
-          <p>Discover the art of beauty with Anjali Bhaskar, an internationally renowned makeup artist specializing in destination weddings, celebrity makeovers, and special events. Let us make your special day unforgettable with our professional touch.</p>
+          <h1>Welcome to Anjali Bhasker Makeovers</h1>
+          <p>Discover the art of beauty with Anjali Bhasker, an internationally renowned makeup artist specializing in destination weddings, celebrity makeovers, and special events. Let us make your special day unforgettable with our professional touch.</p>
           <button className="book-now" onClick={() => { if (openBookingModal) openBookingModal(); }}>Book Now</button>
         </div>
       </section>

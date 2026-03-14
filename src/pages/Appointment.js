@@ -69,7 +69,7 @@ function Appointment() {
               <span className="info-icon">📱</span>
               <h3>Contact</h3>
               <p>+66 123 456 789</p>
-              <p>contact@anjalibhaskarmakeovers.com</p>
+              <p>contact@anjalibhaskermakeovers.com</p>
             </div>
             <div className="info-card">
               <span className="info-icon">⏰</span>

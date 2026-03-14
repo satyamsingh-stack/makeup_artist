@@ -3,9 +3,9 @@ import React from 'react';
 function Bio() {
   return (
     <section className="bio fade-in-element" id="about">
-      <h2>About Anjali Bhaskar</h2>
+      <h2>About Anjali Bhasker</h2>
       <p>
-        Anjali Bhaskar is a renowned international makeup artist who specializes in destination weddings and high-profile events. 
+        Anjali Bhasker is a renowned international makeup artist who specializes in destination weddings and high-profile events. 
         Based in Thailand, she travels extensively to Vietnam and across India, providing her expert makeup services to discerning clients. 
         She has had the privilege of working with top actresses and celebrities, including <strong>Ankita Devi</strong>, 
         ensuring they look absolutely stunning for their most important moments.

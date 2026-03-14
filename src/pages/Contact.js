@@ -7,7 +7,7 @@ function Contact() {
       <h1>Contact Us</h1>
       <p>We would love to hear from you! Reach out to us for bookings, inquiries, or collaborations.</p>
       <ul>
-        <li>Email: contact@anjalibhaskarmakeovers.com</li>
+        <li>Email: contact@anjalibhaskermakeovers.com</li>
         <li>Phone: +66 123 456 789</li>
         <li>Address: Bangkok, Thailand</li>
       </ul>
