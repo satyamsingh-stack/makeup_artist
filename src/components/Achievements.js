@@ -30,7 +30,7 @@ function Achievements() {
   ];
 
   return (
-    <section className="achievements">
+    <section className="achievements" id="achievements">
       <div className="achievements-container">
         <h2 className="achievements-title">🏆 Awards & Achievements 🏆</h2>
         <p className="achievements-subtitle">Recognized for Excellence in Makeup Artistry</p>

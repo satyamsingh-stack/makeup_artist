@@ -21,8 +21,10 @@ function About() {
     <div className="about">
       <div className="about-container">
         <div className="about-content">
-          <h1>About Anjali Bhasker</h1>
-          <p>Anjali Bhasker is a celebrated makeup artist with years of experience in creating stunning looks for brides, celebrities, and high-profile clients. Based in Thailand, she travels across the globe to bring her expertise to destination weddings, fashion shows, and special events. With a team of over 30 skilled professionals, Anjali ensures that every client looks and feels their best on their special day.</p>
+          <h1>About Anjali Bhaskar</h1>
+          <p>Anjali Bhaskar is an internationally acclaimed makeup artist specializing in destination weddings, luxury events, and celebrity makeup. Her artistry has graced top actresses and prominent celebrities, including the renowned Ankita Devi, establishing her reputation as a sought-after name in high-end beauty.</p>
+          <p>Based in Thailand, Anjali frequently travels to Vietnam and across India, delivering her signature flawless makeup services to an exclusive clientele of business professionals, high-profile individuals, and affluent families. Her meticulous attention to detail and passion for perfection have established her as the preferred choice for weddings and special occasions. Each client receives personalized consultation to ensure a bespoke experience tailored to their unique requirements. From intimate gatherings to grand celebrations, Anjali ensures every detail is perfected to create lasting memories.</p>
+          <p>Guided by a vision of excellence, Anjali leads a distinguished team of over 30 professional makeup artists and beauty experts. Together, they traverse the globe, bringing premium makeup services to discerning clients who deserve nothing less than extraordinary. Every transformation reflects her commitment to enhancing natural beauty with sophisticated artistry and timeless elegance.</p>
           <div className="about-stats">
             <div className="stat-item">
               <h3>30+</h3>

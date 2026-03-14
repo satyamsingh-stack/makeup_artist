@@ -168,7 +168,7 @@ function App() {
               <circle cx="18" cy="6" r="1" fill="white"/>
             </svg>
           </a>
-        </div> (truncated)
+        </div>
 
         {/* Booking Modal */}
         {bookingModalOpen && (
