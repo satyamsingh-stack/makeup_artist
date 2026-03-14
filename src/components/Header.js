@@ -2,11 +2,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+function Header({ onBookNowClick }) {
+  const navigate = useNavigate();
   const carouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   // High-quality makeup images from Unsplash
   const carouselImages = [
@@ -92,7 +92,7 @@ function Header() {
           <li><a href="#services" onClick={(e) => scrollToSection(e, 'services')}>Services</a></li>
           <li><a href="#portfolio" onClick={(e) => scrollToSection(e, 'portfolio')}>Portfolio</a></li>
           <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>Contact</a></li>
-          <li><a href="/appointment" onClick={goToAppointment} className="book-btn">Book Now</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); if (onBookNowClick) onBookNowClick(); closeMenu(); }} className="book-btn">Book Now</a></li>
         </ul>
       </nav>
       

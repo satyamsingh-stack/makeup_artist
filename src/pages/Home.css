@@ -74,119 +74,6 @@
   box-shadow: 0 15px 45px rgba(255, 126, 95, 0.5);
 }
 
-/* Quick Book Section */
-.quick-book-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #1a2a3e 0%, #2a3d52 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.quick-book-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(255, 126, 95, 0.15) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.quick-book-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.quick-book-content {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.quick-book-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
-  animation: fadeInDown 0.8s ease;
-}
-
-.quick-book-content p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  color: #b0b8c1;
-  animation: fadeInUp 0.8s ease 0.2s backwards;
-}
-
-.quick-book-form {
-  animation: fadeInUp 0.8s ease 0.4s backwards;
-}
-
-.quick-form-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.quick-form-row input,
-.quick-form-row select {
-  padding: 15px 20px;
-  border: 2px solid rgba(255, 126, 95, 0.3);
-  border-radius: 10px;
-  background: rgba(10, 14, 39, 0.5);
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-}
-
-.quick-form-row input:focus,
-.quick-form-row select:focus {
-  outline: none;
-  border-color: #ff7e5f;
-  box-shadow: 0 0 20px rgba(255, 126, 95, 0.2);
-}
-
-.quick-form-row input::placeholder {
-  color: #888;
-}
-
-.quick-form-row select {
-  cursor: pointer;
-}
-
-.quick-form-row select option {
-  background: #1a2a3e;
-  color: white;
-}
-
-.quick-book-btn {
-  display: block;
-  width: 100%;
-  padding: 18px 40px;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(255, 126, 95, 0.3);
-}
-
-.quick-book-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 45px rgba(255, 126, 95, 0.5);
-}
-
 /* Tutorial Section */
 .tutorial-section {
   padding: 80px 20px;
@@ -458,19 +345,6 @@
 
   .tutorial-modal video {
     width: 95%;
-  }
-  
-  .quick-book-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .quick-form-row {
-    grid-template-columns: 1fr;
-  }
-  
-  .quick-form-row input,
-  .quick-form-row select {
-    padding: 12px 15px;
   }
 }
 

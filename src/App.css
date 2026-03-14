@@ -601,3 +601,218 @@ html {
   color: #888;
   margin-top: 5px;
 }
+
+/* Booking Modal */
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+}
+
+.booking-modal {
+  background: linear-gradient(135deg, #1a2a3e 0%, #2a3d52 100%);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  border: 2px solid rgba(255, 126, 95, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 126, 95, 0.2);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+  background: rgba(255, 126, 95, 0.8);
+  transform: rotate(90deg);
+}
+
+.booking-modal h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #ff7e5f;
+  margin-bottom: 10px;
+}
+
+.booking-modal p {
+  color: #b0b8c1;
+  margin-bottom: 25px;
+}
+
+.booking-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-modal input,
+.booking-modal select {
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 126, 95, 0.3);
+  border-radius: 10px;
+  background: rgba(10, 14, 39, 0.5);
+  color: white;
+  font-size: 1rem;
+}
+
+.booking-modal input:focus,
+.booking-modal select:focus {
+  outline: none;
+  border-color: #ff7e5f;
+}
+
+.booking-modal input[type="date"],
+.booking-modal input[type="time"] {
+  color-scheme: dark;
+}
+
+.booking-modal select option {
+  background: #1a2a3e;
+}
+
+.submit-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 126, 95, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.booking-success {
+  text-align: center;
+  padding: 20px;
+}
+
+.booking-success .success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.booking-success h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+/* Floating Social Media Widget */
+.floating-social {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.social-float {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: popIn 0.5s ease forwards;
+}
+
+.whatsapp-float {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.instagram-float {
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+  color: white;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(225, 48, 108, 0.4);
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+.whatsapp-float {
+  animation-delay: 0.2s;
+}
+
+.instagram-float {
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .floating-social {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .social-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+
